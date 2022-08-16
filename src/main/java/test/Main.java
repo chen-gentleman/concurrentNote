@@ -1,15 +1,30 @@
 package test;
 
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * @Author @Chenxc
  * @Date 2022/5/20 9:56
  */
 public class Main {
     public static void main(String[] args) {
-        //Persion student = new Student();
-        //student.say("cxc");
-        String[] words = {"ab","cd","efgh","123456789"};
-        System.out.println(get(words));
+        Calendar now = Calendar.getInstance();
+        System.out.println(now);
+        now.set(Calendar.HOUR_OF_DAY,23);
+        now.set(Calendar.MINUTE,55);
+        System.out.println(now);
+        System.out.println(now.getTime());
+
+        System.out.println(new Date(Long.MAX_VALUE));
+
+        String t = "fnsdjkfn\\dfjknnlk\\";
+        System.out.println(t);
+        System.out.println(t.replaceAll("\\\\","/"));
+
+//        Persion student = new Student();
+//        student.say("cxc");
+//        System.out.println(student.getClass().getClassLoader());
     }
 
     public static int get(String[] words) {
